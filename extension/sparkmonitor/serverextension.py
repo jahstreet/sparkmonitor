@@ -16,7 +16,7 @@ import os
 from bs4 import BeautifulSoup
 import asyncio
 
-proxy_root = "/sparkmonitor"
+proxy_root = os.environ.get("SPARKMONITOR_UI_PROXY_ROOT", "/sparkmonitor")
 
 
 class SparkMonitorHandler(IPythonHandler):
